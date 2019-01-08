@@ -3,36 +3,39 @@ import logo from './logo.svg';
 import './App.css';
 import { fetchHouses } from '../../thunks/fetchHouses'
 import { connect } from 'react-redux'
-import wolfGif from '../../assets/wolf.gif'
-import Card from '../Card'
+import Wolf from '../Wolf/Wolf'
+import Card from '../Card/Card'
 
-class App extends Component {
+export class App extends Component {
 
   componentDidMount() {
     this.props.fetchHouses()
   }
 
   render() {
-
+    const displayedHouses = this.props.houses.map(house => {
+      return <Card house={house} />
+    })
     return (
       <div className='App'>
         <div className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <h2>Welcome to Westeros</h2>
         </div>
-        <div className='Display-info'>
-          {this.props.isLoading ? wolfGif : null}
+        <div className='Display-info Container'>
+          {this.props.isLoading ? <Wolf /> : displayedHouses}
         </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => ({
-  isLoading: state.isLoading
+export const mapStateToProps = (state) => ({
+  isLoading: state.isLoading,
+  houses: state.houses
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   fetchHouses: () => dispatch(fetchHouses())
 })
 

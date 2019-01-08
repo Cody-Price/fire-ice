@@ -1,7 +1,7 @@
 import { isLoading, hasErrored, addHousesToStore } from '../actions/index'
 import { cleanHouses } from '../utilities/helper'
 
-export const fetchHouses = () => {
+export const fetchSwornMembers = () => {
   const url = 'http://localhost:3001/api/v1/houses'
   return async (dispatch) => {
     try {
@@ -12,7 +12,6 @@ export const fetchHouses = () => {
       }
       dispatch(isLoading(false))
       const data = await response.json()
-      console.log(data)
       const cleanedHouses = cleanHouses(data)
       dispatch(addHousesToStore(cleanedHouses))
     } catch (error) {
