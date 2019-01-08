@@ -9,7 +9,8 @@ export const cleanHouses = (dirtyHouses) => {
       titles: titles,
       coatOfArms: house.coatOfArms,
       ancestralWeapons: ancestralWeapons,
-      words: house.words
+      words: house.words,
+      swornMembers: house.swornMembers
     }
   })
 }

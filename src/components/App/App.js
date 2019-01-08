@@ -5,6 +5,7 @@ import { fetchHouses } from '../../thunks/fetchHouses'
 import { connect } from 'react-redux'
 import Wolf from '../Wolf/Wolf'
 import Card from '../Card/Card'
+import PropTypes from 'prop-types'
 
 export class App extends Component {
 
@@ -14,7 +15,7 @@ export class App extends Component {
 
   render() {
     const displayedHouses = this.props.houses.map(house => {
-      return <Card house={house} />
+      return <Card house={house} key={house.name}/>
     })
     return (
       <div className='App'>
@@ -28,6 +29,12 @@ export class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  houses: PropTypes.array.isRequired,
+  fetchHouses: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired
 }
 
 export const mapStateToProps = (state) => ({

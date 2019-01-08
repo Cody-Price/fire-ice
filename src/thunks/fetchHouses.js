@@ -12,7 +12,6 @@ export const fetchHouses = () => {
       }
       dispatch(isLoading(false))
       const data = await response.json()
-      console.log(data)
       const cleanedHouses = cleanHouses(data)
       dispatch(addHousesToStore(cleanedHouses))
     } catch (error) {
