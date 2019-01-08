@@ -55,16 +55,16 @@ ShallowWrapper {
           </h2>
         </div>,
         <div
-          className="Display-info"
+          className="Display-info Container"
         >
-          <Card
+          <Connect(Card)
             house={
               Object {
                 "name": "stark",
               }
             }
           />
-          <Card
+          <Connect(Card)
             house={
               Object {
                 "name": "tarley",
@@ -129,14 +129,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <Card
+            <Connect(Card)
               house={
                 Object {
                   "name": "stark",
                 }
               }
             />,
-            <Card
+            <Connect(Card)
               house={
                 Object {
                   "name": "tarley",
@@ -144,14 +144,14 @@ ShallowWrapper {
               }
             />,
           ],
-          "className": "Display-info",
+          "className": "Display-info Container",
         },
         "ref": null,
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
-            "nodeType": "function",
+            "key": "stark",
+            "nodeType": "class",
             "props": Object {
               "house": Object {
                 "name": "stark",
@@ -163,8 +163,8 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
-            "nodeType": "function",
+            "key": "tarley",
+            "nodeType": "class",
             "props": Object {
               "house": Object {
                 "name": "tarley",
@@ -200,16 +200,16 @@ ShallowWrapper {
             </h2>
           </div>,
           <div
-            className="Display-info"
+            className="Display-info Container"
           >
-            <Card
+            <Connect(Card)
               house={
                 Object {
                   "name": "stark",
                 }
               }
             />
-            <Card
+            <Connect(Card)
               house={
                 Object {
                   "name": "tarley",
@@ -274,14 +274,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <Card
+              <Connect(Card)
                 house={
                   Object {
                     "name": "stark",
                   }
                 }
               />,
-              <Card
+              <Connect(Card)
                 house={
                   Object {
                     "name": "tarley",
@@ -289,14 +289,14 @@ ShallowWrapper {
                 }
               />,
             ],
-            "className": "Display-info",
+            "className": "Display-info Container",
           },
           "ref": null,
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
-              "nodeType": "function",
+              "key": "stark",
+              "nodeType": "class",
               "props": Object {
                 "house": Object {
                   "name": "stark",
@@ -308,8 +308,8 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
-              "nodeType": "function",
+              "key": "tarley",
+              "nodeType": "class",
               "props": Object {
                 "house": Object {
                   "name": "tarley",

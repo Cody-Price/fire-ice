@@ -27,10 +27,3 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(null, mapDispatchToProps)(Card)
-
-// name: house.name,
-// seats: seats,
-// titles: titles,
-// coatOfArms: house.coatOfArms,
-// ancestralWeapons: ancestralWeapons,
-// words: house.words

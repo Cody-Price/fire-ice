@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { fetchHouses } from '../../thunks/fetchHouses'
 import { connect } from 'react-redux'
-import Wolf from '../Wolf/Wolf'
+import wolfGif from '../../assets/wolf.gif'
 import Card from '../Card/Card'
 import PropTypes from 'prop-types'
 
@@ -24,7 +24,7 @@ export class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         <div className='Display-info Container'>
-          {this.props.isLoading ? <Wolf /> : displayedHouses}
+          {this.props.isLoading ? <img src={wolfGif} alt="loading..." id="wolf"/> : displayedHouses}
         </div>
       </div>
     );
@@ -34,7 +34,7 @@ export class App extends Component {
 App.propTypes = {
   houses: PropTypes.array.isRequired,
   fetchHouses: PropTypes.func.isRequired,
-  isLoading: PropTypes.bool.isRequired
+  isLoading: PropTypes.bool
 }
 
 export const mapStateToProps = (state) => ({
