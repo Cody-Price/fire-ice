@@ -12,6 +12,7 @@ class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         <div className='Display-info'>
+        
         </div>
       </div>
     );
